@@ -1,0 +1,19 @@
+<ul class="list-group">
+  <li
+    class="list-group-item list-group-item-success"
+    *ngFor="let server of serverHub.servers"
+  >
+    <h5>
+      <span class="badge badge-primary">{{server.name}}</span>
+      <span class="badge badge-secondary">{{server.validity}}s</span>
+    </h5>
+  </li>
+  <li
+    class="list-group-item list-group-item-danger"
+    *ngIf="serverHub.servers.length == 0"
+  >
+    <h5>
+      <span class="badge badge-secondary">{{serverHub.noServerNotify}}</span>
+    </h5>
+  </li>
+</ul>
